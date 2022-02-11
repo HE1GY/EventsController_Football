@@ -7,6 +7,7 @@ namespace GameLogic
     public class Gate : MonoBehaviour
     {
         [SerializeField] private CreatureSide _whomGate;
+
         private void OnTriggerEnter(Collider other)
         {
             if (_whomGate != CreatureSide.Player)
@@ -18,6 +19,7 @@ namespace GameLogic
                 EnemyScore();
             }
         }
+
         private void PlayerScore() => EventsController.Broadcast(EventsType.PlayerScoreGoal);
 
         private void EnemyScore() => EventsController.Broadcast(EventsType.EnemyScoreGoal);

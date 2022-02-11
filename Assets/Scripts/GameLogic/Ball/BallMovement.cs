@@ -8,6 +8,12 @@ namespace GameLogic.Ball
 {
     public class BallMovement : MonoBehaviour
     {
+        private const int MinRandomRangValue = -7;
+        private const int MaxRandomRangeValue = 7;
+        private const float MinCoefficientReflection = 0.7f;
+        private const float MaxCoefficientReflection = 1f;
+        private const int Zero = 0;
+        private const int One = 1;
         public Vector3 Direction { private set; get; }
 
         [SerializeField] private float _speed;
@@ -17,23 +23,22 @@ namespace GameLogic.Ball
 
         private void OnEnable()
         {
-            EventsController.AddListener(EventsType.EnemyScoreGoal,ResetPosition);
-            EventsController.AddListener(EventsType.PlayerScoreGoal,ResetPosition);
-            EventsController.AddListener(EventsType.EndGame,OnPause);
-            EventsController.AddListener(EventsType.PauseGame,OnPause);
-            EventsController.AddListener(EventsType.ResetGame,ResetPosition);
-            EventsController.AddListener(EventsType.PlayGame,OnPlaying);
-
+            EventsController.AddListener(EventsType.EnemyScoreGoal, ResetPosition);
+            EventsController.AddListener(EventsType.PlayerScoreGoal, ResetPosition);
+            EventsController.AddListener(EventsType.EndGame, OnPause);
+            EventsController.AddListener(EventsType.PauseGame, OnPause);
+            EventsController.AddListener(EventsType.ResetGame, ResetPosition);
+            EventsController.AddListener(EventsType.PlayGame, OnPlaying);
         }
-        
+
         private void OnDisable()
         {
-            EventsController.RemoveListener(EventsType.PlayerScoreGoal,ResetPosition);
-            EventsController.RemoveListener(EventsType.EnemyScoreGoal,ResetPosition);
-            EventsController.RemoveListener(EventsType.EndGame,OnPause);
-            EventsController.RemoveListener(EventsType.PauseGame,OnPause);
-            EventsController.RemoveListener(EventsType.ResetGame,ResetPosition);
-            EventsController.RemoveListener(EventsType.PlayGame,OnPlaying);
+            EventsController.RemoveListener(EventsType.PlayerScoreGoal, ResetPosition);
+            EventsController.RemoveListener(EventsType.EnemyScoreGoal, ResetPosition);
+            EventsController.RemoveListener(EventsType.EndGame, OnPause);
+            EventsController.RemoveListener(EventsType.PauseGame, OnPause);
+            EventsController.RemoveListener(EventsType.ResetGame, ResetPosition);
+            EventsController.RemoveListener(EventsType.PlayGame, OnPlaying);
         }
 
         private void Start()
@@ -73,8 +78,8 @@ namespace GameLogic.Ball
 
         private void SlightChangeDirection()
         {
-            var сoefficientReflection = Random.Range(0.7f, 1f);
-            Direction  *= сoefficientReflection;
+            var сoefficientReflection = Random.Range(MinCoefficientReflection, MaxCoefficientReflection);
+            Direction *= сoefficientReflection;
         }
 
         private void Move()
@@ -89,25 +94,25 @@ namespace GameLogic.Ball
 
         private Vector3 GetRandomDirection()
         {
-            var randomZ = Random.Range(-7, 7);
-            var randomX = Random.Range(-7, 7);
-            if (randomX != 0 && randomZ != 1)
+            int randomZ = Random.Range(MinRandomRangValue, MaxRandomRangeValue);
+            int randomX = Random.Range(MinRandomRangValue, MaxRandomRangeValue);
+            if (randomX != Zero && randomZ != One)
             {
                 return GetRandomDirection();
             }
-            else if (randomX != 1 && randomZ != 0)
+
+            if (randomX != One && randomZ != Zero)
             {
                 return GetRandomDirection();
             }
-            var newDirection = new Vector3(randomX, 0, randomZ);
+
+            var newDirection = new Vector3(randomX, Zero, randomZ);
             if (newDirection != Vector3.zero)
             {
                 return newDirection;
             }
-            else
-            {
-                return GetRandomDirection();
-            }
+
+            return GetRandomDirection();
         }
     }
 }

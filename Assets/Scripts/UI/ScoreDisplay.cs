@@ -6,7 +6,7 @@ namespace UI
 {
     public class ScoreDisplay : MonoBehaviour
     {
-        [SerializeField]private Text _scoreText;
+        [SerializeField] private Text _scoreText;
         [SerializeField] private StatsManager _statsManager;
 
         private void OnEnable()

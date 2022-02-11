@@ -3,9 +3,8 @@
 namespace GameLogic.Creature.PlayerScripts
 {
     [RequireComponent(typeof(PlayerInput))]
-    public class PlayerMove:CreatureMove
+    public class PlayerMove : CreatureMove
     {
-
         private PlayerInput _input;
 
         private void Awake()
@@ -16,14 +15,12 @@ namespace GameLogic.Creature.PlayerScripts
         private void Update()
         {
             Move();
-            transform.position=base.GetClampedZVector();
+            transform.position = base.GetClampedZVector();
         }
 
-        protected override  void Move()
+        protected override void Move()
         {
-            transform.Translate(-transform.forward* _input.InputZ*_speed*Time.deltaTime);
+            transform.Translate(-transform.forward * _input.InputZ * _speed * Time.deltaTime);
         }
-
-        
     }
 }

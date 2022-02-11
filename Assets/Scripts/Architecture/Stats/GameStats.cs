@@ -7,7 +7,7 @@ namespace Architecture.Stats
         private readonly int _goalsToWin;
 
         public string Winner { get; private set; }
-        
+
         private int _playerGoalCount;
         private int _enemyGoalCount;
 
@@ -25,13 +25,13 @@ namespace Architecture.Stats
         {
             if (creatureSide == CreatureSide.Enemy)
             {
-               var currentPoint= ++_enemyGoalCount;
-                CheckIfWin(currentPoint,creatureSide);
+                var currentPoint = ++_enemyGoalCount;
+                CheckIfWin(currentPoint, creatureSide);
             }
             else
             {
-                var currentPoint= ++_playerGoalCount;
-                CheckIfWin(currentPoint,creatureSide);
+                var currentPoint = ++_playerGoalCount;
+                CheckIfWin(currentPoint, creatureSide);
             }
         }
 
@@ -41,7 +41,7 @@ namespace Architecture.Stats
             _enemyGoalCount = default(int);
         }
 
-        private void CheckIfWin(int score,CreatureSide creatureSide)
+        private void CheckIfWin(int score, CreatureSide creatureSide)
         {
             if (score > _goalsToWin)
             {

@@ -18,19 +18,19 @@ namespace GameLogic.Creature.AI
         private void Defence()
         {
             Move();
-            transform.position=base.GetClampedZVector();
+            transform.position = base.GetClampedZVector();
         }
-        
+
         protected override void Move()
         {
             var speedPerSec = _speed * Time.deltaTime;
             if (_ballMovement.transform.position.z > transform.position.z)
             {
-                transform.Translate(-transform.forward*speedPerSec);
+                transform.Translate(-transform.forward * speedPerSec);
             }
-            else if(_ballMovement.transform.position.z < transform.position.z)
+            else if (_ballMovement.transform.position.z < transform.position.z)
             {
-                transform.Translate(transform.forward*speedPerSec);
+                transform.Translate(transform.forward * speedPerSec);
             }
         }
     }

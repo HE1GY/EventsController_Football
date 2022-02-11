@@ -7,25 +7,25 @@ namespace Architecture.Stats
     public class StatsManager : MonoBehaviour
     {
         public event Action<string> ScoreChange;
-        
+
         [SerializeField] private int _lastGoal;
-        
+
         private GameStats _gameStats;
 
-        private void Awake() => _gameStats= new GameStats(_lastGoal);
+        private void Awake() => _gameStats = new GameStats(_lastGoal);
 
         private void OnEnable()
         {
-            EventsController.AddListener(EventsType.PlayerScoreGoal,PlayerScore);
-            EventsController.AddListener(EventsType.EnemyScoreGoal,EnemyScore);
-            EventsController.AddListener(EventsType.ResetGame,ResetStats);
+            EventsController.AddListener(EventsType.PlayerScoreGoal, PlayerScore);
+            EventsController.AddListener(EventsType.EnemyScoreGoal, EnemyScore);
+            EventsController.AddListener(EventsType.ResetGame, ResetStats);
         }
 
         private void OnDisable()
         {
-            EventsController.RemoveListener(EventsType.PlayerScoreGoal,PlayerScore);
-            EventsController.RemoveListener(EventsType.EnemyScoreGoal,EnemyScore);
-            EventsController.RemoveListener(EventsType.ResetGame,ResetStats);
+            EventsController.RemoveListener(EventsType.PlayerScoreGoal, PlayerScore);
+            EventsController.RemoveListener(EventsType.EnemyScoreGoal, EnemyScore);
+            EventsController.RemoveListener(EventsType.ResetGame, ResetStats);
         }
 
         public string GetWinnerName() => _gameStats.Winner;
