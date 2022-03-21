@@ -6159,7 +6159,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507451098}
-  m_LocalRotation: {x: 0.4657891, y: -0.5320155, z: 0.46578923, w: 0.53201544}
+  m_LocalRotation: {x: 0.46578938, y: -0.53201526, z: 0.46578896, w: 0.5320157}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6506,7 +6506,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522811750}
-  m_LocalRotation: {x: 0.4482986, y: -0.54683495, z: 0.44829875, w: 0.54683477}
+  m_LocalRotation: {x: 0.4482987, y: -0.54683477, z: 0.4482986, w: 0.5468349}
   m_LocalPosition: {x: 77.1, y: 32.23, z: 54.407}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -7078,7 +7078,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 589321779}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pick up Props
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7313,7 +7313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 599391491}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wood_path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11259,7 +11259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 867978180}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain_path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14019,7 +14019,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1066566350}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20749,7 +20749,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590082132}
-  m_LocalRotation: {x: 0.44829854, y: -0.54683495, z: 0.44829863, w: 0.5468348}
+  m_LocalRotation: {x: 0.4482987, y: -0.54683477, z: 0.4482986, w: 0.5468349}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -21992,7 +21992,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1703863884}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22513,9 +22513,9 @@ ParentConstraint:
   m_TranslationAtRest: {x: 78.085, y: 18.44, z: 53.465}
   m_RotationAtRest: {x: 0, y: 0, z: 0}
   m_TranslationOffsets:
-  - {x: 0.024951935, y: -2.3975677, z: 15.143881}
+  - {x: 0.024951935, y: -2.3975677, z: 15.143883}
   m_RotationOffsets:
-  - {x: -2.9613013, y: 89.40722, z: -78.674904}
+  - {x: -2.9612772, y: 89.40723, z: -78.67491}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
@@ -23022,7 +23022,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1767446352}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
