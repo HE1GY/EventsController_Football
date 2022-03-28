@@ -38,7 +38,7 @@ namespace Snake
             _input.Disable();
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             if (!_dead)
             {
@@ -55,6 +55,7 @@ namespace Snake
                 _dead = true;
                 _rigidbody.isKinematic = false;
                 _rigidbody.AddForce(Vector3.up * _boomForce, ForceMode.Acceleration);
+                _rigidbody.AddTorque(Vector3.zero * _boomForce, ForceMode.Acceleration);
             }
         }
     }

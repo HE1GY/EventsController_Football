@@ -28,7 +28,7 @@ namespace PlayerScripts
         private Animator _animator;
         private CharacterController _characterController;
 
-        private PlayerInput _playerInput;
+        private PlayerInput3D _playerInput;
         private PlayerAnimation _playerAnimation;
         private PlayerMovement _playerMovement;
         private TakeThrower _takeThrower;
@@ -46,7 +46,7 @@ namespace PlayerScripts
 
             MoveValueSetup moveValueSetup = new MoveValueSetup(_walkSpeed, _runSpeed, _jumpHeight);
 
-            _playerInput = new PlayerInput();
+            _playerInput = new PlayerInput3D();
             _playerMovement = new PlayerMovement(_characterController, _playerInput, moveValueSetup, _camTransform,
                 _groundMask);
             _playerAnimation = new PlayerAnimation(_animator);

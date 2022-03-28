@@ -8,7 +8,7 @@ namespace Player
         public event Action<Vector3> Catch;
 
         private const int DefaultLayer = 0;
-        private const int MagneticLayer = 7;
+        private const int MagneticLayer = 8;
 
         private readonly Transform _placeHolder;
         private Rigidbody _currentRigidbody;
@@ -42,12 +42,15 @@ namespace Player
 
         private void FinallyCatch(Rigidbody rigidbody)
         {
-            _currentCollider = rigidbody.gameObject.GetComponent<Collider>();
-            rigidbody.isKinematic = true;
-            rigidbody.transform.SetParent(_placeHolder);
-            _currentRigidbody = rigidbody;
-            rigidbody.gameObject.layer = DefaultLayer;
-            _currentCollider.enabled = false;
+            if (_currentRigidbody == null)
+            {
+                _currentCollider = rigidbody.gameObject.GetComponent<Collider>();
+                rigidbody.isKinematic = true;
+                rigidbody.transform.SetParent(_placeHolder);
+                _currentRigidbody = rigidbody;
+                rigidbody.gameObject.layer = DefaultLayer;
+                _currentCollider.enabled = false;
+            }
         }
 
 
@@ -57,6 +60,7 @@ namespace Player
             _currentRigidbody.isKinematic = false;
             _currentRigidbody.transform.parent = null;
             _currentCollider.enabled = true;
+            _currentRigidbody = null;
         }
     }
 }

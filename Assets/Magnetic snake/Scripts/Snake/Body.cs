@@ -5,7 +5,7 @@ namespace Snake
 {
     public class Body
     {
-        private const int Gab = 300;
+        private const int Gab = 100;
 
         private List<Vector3> _moveHistory = new List<Vector3>();
         private List<Segment> _bodySegments = new List<Segment>();
@@ -19,6 +19,7 @@ namespace Snake
             _bodyPartTemplate = bodyPartTemplate;
             _growZone = growZone;
             _growZone.Grow += GrowSnake;
+            
             GrowSnake();
             GrowSnake();
             GrowSnake();

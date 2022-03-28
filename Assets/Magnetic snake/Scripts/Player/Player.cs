@@ -1,3 +1,4 @@
+using Magnetic_snake.Scripts.Player;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 

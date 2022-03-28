@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Player
+namespace Magnetic_snake.Scripts.Player
 {
     public class GroundChecker
     {

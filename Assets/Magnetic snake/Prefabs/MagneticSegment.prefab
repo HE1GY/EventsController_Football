@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2817668124566969904}
   - component: {fileID: 5042182138080468275}
   - component: {fileID: 41448629}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: MagneticSegment
   m_TagString: Untagged
   m_Icon: {fileID: 0}

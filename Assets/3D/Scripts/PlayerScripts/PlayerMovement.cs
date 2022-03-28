@@ -5,6 +5,7 @@ using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
+
 namespace PlayerScripts
 {
     public class PlayerMovement
@@ -41,7 +42,7 @@ namespace PlayerScripts
         private bool _isMovable;
 
 
-        public PlayerMovement(CharacterController characterController, PlayerInput input, MoveValueSetup moveValueSetup,
+        public PlayerMovement(CharacterController characterController, PlayerInput3D input, MoveValueSetup moveValueSetup,
             Transform camTransform, LayerMask groundLayerMask)
         {
             _characterController = characterController;

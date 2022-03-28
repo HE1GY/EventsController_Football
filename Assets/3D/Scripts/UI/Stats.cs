@@ -7,7 +7,7 @@ namespace UI
 {
     public class Stats : MonoBehaviour
     {
-        [SerializeField] private Player _player;
+        [SerializeField] private PlayerScripts.Player _player;
         [SerializeField] private Palka _palka;
 
         [SerializeField] private Text _stepsCountText;

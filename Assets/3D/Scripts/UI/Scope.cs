@@ -1,4 +1,3 @@
-using PlayerScripts;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +5,7 @@ namespace UI
 {
     public class Scope : MonoBehaviour
     {
-        [SerializeField] private Player _player;
+        [SerializeField] private PlayerScripts.Player _player;
         [SerializeField] private Color _idle;
         [SerializeField] private Color _takable;
 

@@ -19,7 +19,7 @@ namespace PlayerScripts
 
         private IThrowable _iThrowableItem;
 
-        public TakeThrower(Transform placeHolder, Transform camTransform, LayerMask mask, PlayerInput input,
+        public TakeThrower(Transform placeHolder, Transform camTransform, LayerMask mask, PlayerInput3D input,
             float throwForce, float takeDistance)
         {
             _placeHolder = placeHolder;
